@@ -5,7 +5,7 @@ $app = new Illuminate\Container\Container;
 
 // 设置模板和缓存路径
 $app['config'] = [
-  'view.compiled' => '/tmp',
+  'view.compiled' => __DIR__ . '/cache',
   'view.paths' => [
     __DIR__ . '/views',
   ],
@@ -27,4 +27,4 @@ echo $app['view']->make('vim', [
     'Others',
   ],
   'a' => 1,
-])->render();
+  ])->render();
